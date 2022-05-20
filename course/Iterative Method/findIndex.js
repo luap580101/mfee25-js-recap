@@ -7,6 +7,6 @@ let animals = [
 
 let animalFindIndex = animals.findIndex((value, index) => {
   return value.num > 20;
-  //   只會回傳位置
+//   只會回傳位置
 });
 console.log(animalFindIndex);
