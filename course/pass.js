@@ -19,14 +19,17 @@ let car1 = {
   color: "red",
 };
 let car2 = car1;
-// car2.color = "blue";
-// console.log(car1.color);
-// console.log(car2.color);
-car2 = {
-  color: car1.color,
-  brand: "BMW",
-};
-// car1.color = "blue";
-// car2.color = "blue";
+car2.color = "blue";
 console.log(car1.color);
 console.log(car2.color);
+// car2 = {
+//   brand: "BMW",
+// };
+// console.log(car2)
+// // car1.color = "blue";
+// // car2.color = "blue";
+// console.log(car1.color);
+// console.log(car2.color);
+
+let car3 = { ...car1, brand: "Ford" };
+console.log(car3);
