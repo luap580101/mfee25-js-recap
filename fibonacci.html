@@ -9,6 +9,29 @@
 
   <body>
     <script>
+      //   let fibonacciGenerator = (num) => {
+      //     let arr = [];
+      //     if (num == 1) {
+      //       arr = [0];
+      //     } else if (num == 2) {
+      //       arr = [0, 1];
+      //     } else {
+      //       arr = [0, 1];
+      //       let num1 = 0;
+      //       let num2 = 1;
+      //       let sum = 0;
+      //       for (let i = 0; i < num - 2; i++) {
+      //         sum = num1 + num2;
+      //         num1 = num2;
+      //         num2 = sum;
+      //         // arr.push(sum);
+      //         arr = [...arr, sum]
+      //       }
+      //     }
+
+      //     return arr;
+      //   };
+
       let fibonacciGenerator = (num) => {
         let arr = [];
         if (num == 1) {
@@ -17,14 +40,8 @@
           arr = [0, 1];
         } else {
           arr = [0, 1];
-          let num1 = 0;
-          let num2 = 1;
-          let sum = 0;
-          for (let i = 0; i < num - 2; i++) {
-            sum = num1 + num2;
-            num1 = num2;
-            num2 = sum;
-            arr.push(sum);
+          for (let i = 2; i < num; i++) {
+            arr.push(arr[i - 1] + arr[i - 2]);
           }
         }
 
@@ -34,7 +51,6 @@
       console.log(fibonacciGenerator(1));
       console.log(fibonacciGenerator(2));
       console.log(fibonacciGenerator(20));
-      
     </script>
   </body>
 </html>
