@@ -18,28 +18,33 @@
             { id: "a5", en: "mouse", cn: "鼠", num: 20 },
         ];
 
+        // 設定 size
         let newAnimals = animals.map((animal, index) => {
             return ({ ...animal, size: "small" })
         })
-        console.log(newAnimals)
+        // console.log(newAnimals)
 
+        // 1. 找到熊的位置
         let findBear = newAnimals.findIndex((animal, index) => {
             return animal.cn == "熊"
         })
         // console.log(findBear)
-        newAnimals[findBear].size = "large"
-        console.log(newAnimals)
 
+        // 2. 直接把熊 改成 熊大
+        newAnimals[findBear].size = "large"
+        // console.log(newAnimals)
+
+        // 3. 插入一個豬 在 2 的位置
         newAnimals.splice(2, 0, { id: "a35", en: "pig", cn: "豬", num: 3, size: "medium" })
         console.log(newAnimals)
 
-    
-        let findNumLess10 =newAnimals.find((animal,index)=>{
-            return animal.num <10
+        // 4. 找到第一筆num <10 的資料
+        let findNumLess10 = newAnimals.find((animal, index) => {
+            return animal.num < 10
         })
         console.log(findNumLess10)
 
-        
+
     </script>
 </body>
 
