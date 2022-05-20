@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+</head>
+
+<body>
+    <script>
+        let fibonacciGenerator = (num) => {
+            let arr = [0];
+            let num1 = 0
+            let num2 = 1
+            let sum = 0
+            for (let i = 0; i < num; i++) {
+
+                sum = num1 + num2
+                num1 = num2
+                num2 = sum
+                arr.push(sum)
+            }
+            return arr
+        }
+        console.log(fibonacciGenerator(20))
+    </script>
+</body>
+
+</html>
