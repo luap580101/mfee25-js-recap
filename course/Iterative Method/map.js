@@ -5,8 +5,8 @@ let animals = [
   { id: "a4", en: "hotDog", cn: "熱狗", num: 2 },
 ];
 
-let animalCnName = animals.map((value, index) => {
+let animalMap = animals.map((value, index) => {
   return value.cn;
 });
 
-console.log(animalCnName);
+console.log(animalMap);
