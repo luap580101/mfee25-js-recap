@@ -20,31 +20,57 @@
 
         // 設定 size
         let newAnimals = animals.map((animal, index) => {
-            return ({ ...animal, size: "small" })
-        })
-        // console.log(newAnimals)
+            return { ...animal, size: "small" };
+            // return animal.size : "small"
+        });
+        console.log(newAnimals);
 
         // 1. 找到熊的位置
         let findBear = newAnimals.findIndex((animal, index) => {
-            return animal.cn == "熊"
-        })
+            return animal.cn == "熊";
+        });
         // console.log(findBear)
 
         // 2. 直接把熊 改成 熊大
-        newAnimals[findBear].size = "large"
+        newAnimals[findBear].size = "large";
         // console.log(newAnimals)
 
+        //   // 1.2. map 作法
+        //   let largeBear = newAnimals.map((animal, i)=>{
+        //       if(animal.cn == "熊"){
+        //           return {...animal, size: 'large'}
+        //       }else{
+        //           return {...animal}
+        //       }
+        //   })
+
         // 3. 插入一個豬 在 2 的位置
-        newAnimals.splice(2, 0, { id: "a35", en: "pig", cn: "豬", num: 3, size: "medium" })
-        console.log(newAnimals)
+        newAnimals.splice(2, 0, {
+            id: "a35",
+            en: "pig",
+            cn: "豬",
+            num: 3,
+            size: "medium",
+        });
+        console.log(newAnimals);
+
+        //   // 3. filter 的作法
+        //   let lessThanIndex2 = newAnimals.filter((animal, i) => {
+        //     return i < 2;
+        //   });
+        //   let moreThanIndex2 = newAnimals.filter((animal, i) => {
+        //     return i > 2;
+        //   });
+        //   let pig = { id: "a35", en: "pig", cn: "豬", num: 3, size: "medium" };
+        //   let newAnimalsArray = [...lessThanIndex2, pig, ...moreThanIndex2];
+        //   console.log("newAnimalsArray")
+        //   console.log(newAnimalsArray)
 
         // 4. 找到第一筆num <10 的資料
         let findNumLess10 = newAnimals.find((animal, index) => {
-            return animal.num < 10
-        })
-        console.log(findNumLess10)
-
-
+            return animal.num < 10;
+        });
+        console.log(findNumLess10.cn);
     </script>
 </body>
 
